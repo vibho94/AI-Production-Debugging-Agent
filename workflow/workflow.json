@@ -1,0 +1,347 @@
+{
+  "name": "AI Production Debugging Agent",
+  "nodes": [
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+      "typeVersion": 1.4,
+      "position": [
+        -416,
+        -48
+      ],
+      "id": "de4f0420-8b73-4e79-93cd-9551f1eb693d",
+      "name": "When chat message received",
+      "webhookId": "e088e0be-acaa-45b4-8b70-133831eb46a7"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $ ('When chat message received').item.json.chatInput}}",
+        "hasOutputParser": true,
+        "options": {
+          "systemMessage": "You are an Intent Classification Agent.\n\nYour task is to identify:\n\n1. issue_type\n2. lookup_column\n3. lookup_value\n\nAllowed issue_type values:\n- shipment_issue\n- order_issue\n- inventory_issue\n- api_issue\n- scheduler_issue\n\nExamples:\n\nUser: Shipment issue for order 1001\n\nOutput:\nissue_type: shipment_issue\nlookup_column: order_id\nlookup_value: 1001\n\nUser: Find order for AWB5001\n\nOutput:\nissue_type: shipment_issue\nlookup_column: awb\nlookup_value: AWB5001\n\nReturn ONLY the required structured output.\nDo not include explanations.\nDo not wrap the output inside another object called \"output\"."
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 3.1,
+      "position": [
+        -208,
+        -112
+      ],
+      "id": "bab9ffcb-cf72-495f-8efd-a6fe7c65c47e",
+      "name": "AI Agent"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1.1,
+      "position": [
+        -336,
+        176
+      ],
+      "id": "3f68e42b-637a-427d-8273-34358f17420b",
+      "name": "Google Gemini Chat Model",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "lIL9rqnmvwAlYG2f",
+          "name": "Google Gemini(PaLM) Api account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "modelName": "models/gemini-2.5-flash",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1.1,
+      "position": [
+        1264,
+        208
+      ],
+      "id": "b42a9917-e3b4-4707-b7cc-cf1c0f909829",
+      "name": "Google Gemini Chat Model1",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "lIL9rqnmvwAlYG2f",
+          "name": "Google Gemini(PaLM) Api account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "schemaType": "manual",
+        "inputSchema": "{\n  \"type\": \"object\",\n  \"properties\": {\n    \"issue_type\": {\n      \"type\": \"string\"\n    },\n    \"lookup_column\": {\n      \"type\": \"string\"\n    },\n    \"lookup_value\": {\n      \"type\": \"string\"\n    }\n  },\n  \"required\": [\n    \"issue_type\",\n    \"lookup_column\",\n    \"lookup_value\"\n  ]\n}"
+      },
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "typeVersion": 1.3,
+      "position": [
+        -128,
+        192
+      ],
+      "id": "6a0499d3-b921-490d-8aa3-717e4f0a144c",
+      "name": "Structured Output Parser"
+    },
+    {
+      "parameters": {},
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.4,
+      "position": [
+        -224,
+        176
+      ],
+      "id": "961381d8-5e11-42d8-84a1-59717674676d",
+      "name": "Simple Memory"
+    },
+    {
+      "parameters": {},
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.4,
+      "position": [
+        1392,
+        208
+      ],
+      "id": "7206ce65-157a-48a3-83de-004d2f0bb156",
+      "name": "Simple Memory1"
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "SELECT\n    sequence_no,\n    table_name,\n    lookup_column,\n    description\nFROM investigation_steps\nWHERE issue_type='{{ $json.output.issue_type }}'\nORDER BY sequence_no;",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.5,
+      "position": [
+        192,
+        -48
+      ],
+      "id": "b1f6b667-dbf9-4e4b-837f-a0262d4f8fdd",
+      "name": "Get Investigation Steps",
+      "credentials": {
+        "mySql": {
+          "id": "ar34f5a2o32OuWGl",
+          "name": "MySQL account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "cd2ddf77-beff-4f90-9e7c-35c0d86066b3",
+              "name": "=Query",
+              "value": "={{\n`SELECT * FROM ${$json.table_name} WHERE ${$json.lookup_column} = '${$('AI Agent').first().json.output.lookup_value}';`\n}}",
+              "type": "string"
+            }
+          ]
+        },
+        "includeOtherFields": true,
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        432,
+        -16
+      ],
+      "id": "6d59a416-7634-40ab-9e7c-94508ddc9a95",
+      "name": "Edit Fields"
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "{{ $json.Query }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.5,
+      "position": [
+        720,
+        -16
+      ],
+      "id": "aea97b7c-cf06-414f-b947-feffeaa61354",
+      "name": "Execution Investigation Query",
+      "credentials": {
+        "mySql": {
+          "id": "ar34f5a2o32OuWGl",
+          "name": "MySQL account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "aggregate": "aggregateAllItemData",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.aggregate",
+      "typeVersion": 1,
+      "position": [
+        1008,
+        -32
+      ],
+      "id": "f7439801-28f7-43a7-8781-377bc89aceff",
+      "name": "Aggregate1"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Analyze the following investigation results.\n\n{{ JSON.stringify($json.data) }}",
+        "options": {
+          "systemMessage": "You are a Senior Production Support Engineer.\n\nAnalyze the investigation results.\n\nYour tasks are:\n\n1. Summarize the exisitng data.\n2. Summarize the findings.\n3. Identify any production issues.\n4. Explain the probable root cause.\n5. Recommend the next troubleshooting steps.\n\nDo not invent information. Base your answer only on the provided investigation results."
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 3.1,
+      "position": [
+        1264,
+        -32
+      ],
+      "id": "8be21e23-0321-473e-8802-48c4f90a09ab",
+      "name": "AI Agent1"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When chat message received": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent": {
+      "main": [
+        [
+          {
+            "node": "Get Investigation Steps",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model1": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent1",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Structured Output Parser": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Simple Memory": {
+      "ai_memory": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Simple Memory1": {
+      "ai_memory": [
+        [
+          {
+            "node": "AI Agent1",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Investigation Steps": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "Execution Investigation Query",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Execution Investigation Query": {
+      "main": [
+        [
+          {
+            "node": "Aggregate1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Aggregate1": {
+      "main": [
+        [
+          {
+            "node": "AI Agent1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate",
+    "availableInMCP": false
+  },
+  "versionId": "07b85d0a-9912-4783-a018-9b91f6c5dbfe",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "a4218a490a77601f410070ca4627789d9241bccc0c64488cc4c5ebfb64284ba1"
+  },
+  "nodeGroups": [],
+  "id": "oznorRaknksvWTOA",
+  "tags": []
+}

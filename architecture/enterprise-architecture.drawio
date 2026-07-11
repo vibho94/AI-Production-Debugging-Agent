@@ -1,0 +1,151 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="g0y5bdYiWwbdzg6wv70W">
+    <mxGraphModel dx="2771" dy="2138" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="z0GRAUUo6ztId1xv3rtj-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=29;fontColor=#1F3A93;fontStyle=1" value="AI Production Debugging Agent&amp;nbsp;&lt;div&gt;Metadata-Driven Enterprise Architecture&lt;/div&gt;" vertex="1">
+          <mxGeometry height="160" width="850" x="510" y="-120" as="geometry" />
+        </mxCell>
+        <mxCell id="z0GRAUUo6ztId1xv3rtj-6" edge="1" parent="1" source="z0GRAUUo6ztId1xv3rtj-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontColor=light-dark(#1135e8, #ededed);strokeWidth=2;" target="z0GRAUUo6ztId1xv3rtj-3" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="z0GRAUUo6ztId1xv3rtj-2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E3F2FD;labelBorderColor=none;align=center;" value="👤&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Production Support User&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;Example :&amp;nbsp;&lt;/div&gt;&lt;div&gt;Shipment issue for Order 1001&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="110" width="220" x="20" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="z0GRAUUo6ztId1xv3rtj-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EDE7F6;labelBorderColor=none;align=center;" value="&lt;div&gt;&lt;b&gt;🤖&amp;nbsp;&lt;/b&gt;&lt;b style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;AI Agent 1&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;Intent Classifier&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;LLM (Google Gemini)&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;b&gt;──────────────&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;✓ Detect Issue Type&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;✓ Extract Lookup Column&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;✓ Extract Lookup Value&lt;/b&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="110" width="220" x="350" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="z0GRAUUo6ztId1xv3rtj-7" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Structured Output" vertex="1">
+          <mxGeometry height="30" width="100" x="245" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="z0GRAUUo6ztId1xv3rtj-8" parent="1" style="whiteSpace=wrap;html=1;aspect=fixed;" value="&lt;div&gt;{&lt;/div&gt;&lt;div&gt;&amp;nbsp; issue_type,&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp; lookup_column,&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; lookup_value&lt;/div&gt;&lt;div&gt;}&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="90" x="250" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="z0GRAUUo6ztId1xv3rtj-29" edge="1" parent="1" source="z0GRAUUo6ztId1xv3rtj-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1160" y="290" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="z0GRAUUo6ztId1xv3rtj-13" parent="1" style="swimlane;startSize=0;fillColor=#E8F5E9;strokeWidth=2;strokeColor=#2E7D32;" value="" vertex="1">
+          <mxGeometry height="300" width="320" x="710" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="z0GRAUUo6ztId1xv3rtj-14" parent="z0GRAUUo6ztId1xv3rtj-13" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontStyle=1;fontColor=#006633;fontSize=16;" value="Metadata Repository" vertex="1">
+          <mxGeometry height="30" width="163" x="78.5" as="geometry" />
+        </mxCell>
+        <mxCell id="z0GRAUUo6ztId1xv3rtj-15" parent="z0GRAUUo6ztId1xv3rtj-13" style="whiteSpace=wrap;html=1;aspect=fixed;" value="&lt;div&gt;table_metadata&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Stores&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Table Information&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="104" width="104" x="30" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="z0GRAUUo6ztId1xv3rtj-16" parent="z0GRAUUo6ztId1xv3rtj-13" style="whiteSpace=wrap;html=1;aspect=fixed;" value="&lt;div&gt;column_metadata&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Stores&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Column Details&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="104" width="104" x="190" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="z0GRAUUo6ztId1xv3rtj-17" parent="z0GRAUUo6ztId1xv3rtj-13" style="whiteSpace=wrap;html=1;aspect=fixed;" value="business_rules&lt;div&gt;Stores Business Logic&lt;/div&gt;" vertex="1">
+          <mxGeometry height="104" width="104" x="30" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="z0GRAUUo6ztId1xv3rtj-18" parent="z0GRAUUo6ztId1xv3rtj-13" style="whiteSpace=wrap;html=1;aspect=fixed;" value="&lt;div&gt;investigation_steps&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Stores&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Investigation Flow&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="104" width="104" x="190" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="z0GRAUUo6ztId1xv3rtj-27" edge="1" parent="1" source="z0GRAUUo6ztId1xv3rtj-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=-0.005;entryY=0.181;entryDx=0;entryDy=0;entryPerimeter=0;" target="z0GRAUUo6ztId1xv3rtj-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="z0GRAUUo6ztId1xv3rtj-28" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Uses Issue Type" vertex="1">
+          <mxGeometry height="30" width="120" x="570" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="z0GRAUUo6ztId1xv3rtj-34" edge="1" parent="1" source="z0GRAUUo6ztId1xv3rtj-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="z0GRAUUo6ztId1xv3rtj-32">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1340" y="280" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="z0GRAUUo6ztId1xv3rtj-30" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF3E0;strokeColor=#EF6C00;container=1;" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;b&gt;🐬&lt;/b&gt;&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;b&gt;Get Investigation Steps&lt;/b&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;b&gt;&amp;nbsp;&lt;/b&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;b&gt;MySQL&amp;nbsp;&lt;/b&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;b&gt;SELECT investigation_steps WHERE issue_type&lt;/b&gt;&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="170" width="180" x="1160" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="z0GRAUUo6ztId1xv3rtj-31" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=14;" value="&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Get Investigation Steps (My sql)&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="50" width="110" x="1040" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="z0GRAUUo6ztId1xv3rtj-42" edge="1" parent="1" source="z0GRAUUo6ztId1xv3rtj-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="z0GRAUUo6ztId1xv3rtj-37">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1660" y="283" />
+              <mxPoint x="1660" y="283" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="z0GRAUUo6ztId1xv3rtj-32" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ECEFF1;strokeColor=#546E7A;" value="&lt;b&gt;⚙️&lt;/b&gt;&lt;div&gt;&lt;b&gt;Dynamic SQL Builder&amp;nbsp;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;Creates SQL using&amp;nbsp;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;• table_name&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;• lookup_column&amp;nbsp;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;• lookup_value&lt;/b&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="170" width="180" x="1450" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="z0GRAUUo6ztId1xv3rtj-35" edge="1" parent="1" source="z0GRAUUo6ztId1xv3rtj-31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;innerLoopWaypoints=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="z0GRAUUo6ztId1xv3rtj-31">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="z0GRAUUo6ztId1xv3rtj-36" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=14;" value="Investigation Steps" vertex="1">
+          <mxGeometry height="40" width="90" x="1340" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="z0GRAUUo6ztId1xv3rtj-52" edge="1" parent="1" source="z0GRAUUo6ztId1xv3rtj-37" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1820" y="430" />
+              <mxPoint x="1820" y="430" />
+            </Array>
+            <mxPoint x="1820" y="440" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="z0GRAUUo6ztId1xv3rtj-57" edge="1" parent="1" source="z0GRAUUo6ztId1xv3rtj-37" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2050" y="282.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="z0GRAUUo6ztId1xv3rtj-37" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF3E0;strokeColor=#EF6C00;container=1;" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;b&gt;🐬&lt;/b&gt;&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;b&gt;Execute Investigation Queries&lt;/b&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;b&gt;MySQL&lt;/b&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;b&gt;Execute&lt;/b&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;b&gt;Generated SQL&lt;/b&gt;&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="175" width="180" x="1730" y="195" as="geometry" />
+        </mxCell>
+        <mxCell id="z0GRAUUo6ztId1xv3rtj-43" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=14;" value="Generated SQL" vertex="1">
+          <mxGeometry height="30" width="90" x="1640" y="245" as="geometry" />
+        </mxCell>
+        <mxCell id="z0GRAUUo6ztId1xv3rtj-47" edge="1" parent="1" source="z0GRAUUo6ztId1xv3rtj-44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0;exitDx=0;exitDy=0;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1729.571428571429" y="449.7142857142858" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="z0GRAUUo6ztId1xv3rtj-69" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1920" y="533" as="sourcePoint" />
+            <mxPoint x="2130" y="363" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="z0GRAUUo6ztId1xv3rtj-44" parent="1" style="swimlane;startSize=0;align=left;" value="" vertex="1">
+          <mxGeometry height="200" width="190" x="1730" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="z0GRAUUo6ztId1xv3rtj-48" parent="z0GRAUUo6ztId1xv3rtj-44" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=top;rounded=0;fontSize=15;fontStyle=1" value="&lt;div&gt;&amp;nbsp;&lt;span style=&quot;color: rgb(204, 0, 0);&quot;&gt;Production Database&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Orders&amp;nbsp; &amp;nbsp; &amp;nbsp;Inventory&lt;/div&gt;&lt;div&gt;Shipment&amp;nbsp; &amp;nbsp;Scheduler&amp;nbsp;&lt;/div&gt;&lt;div&gt;API Log&amp;nbsp; &amp;nbsp; Order Detail&lt;/div&gt;" vertex="1">
+          <mxGeometry height="180" width="170" x="10" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="z0GRAUUo6ztId1xv3rtj-55" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Reads Production Data" vertex="1">
+          <mxGeometry height="30" width="80" x="1730" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="z0GRAUUo6ztId1xv3rtj-60" edge="1" parent="1" source="z0GRAUUo6ztId1xv3rtj-56" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="z0GRAUUo6ztId1xv3rtj-59" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="z0GRAUUo6ztId1xv3rtj-56" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=light-dark(#D4E1F5,#A9C4EB);" value="&lt;b&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;Aggregate Results&lt;/font&gt;&lt;/b&gt;&lt;div&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/span&gt;&lt;div&gt;&lt;div&gt;&lt;b&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;Merge&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;Multiple SQL Results&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;↓&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;Single JSON&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="168" width="180" x="2050" y="195" as="geometry" />
+        </mxCell>
+        <mxCell id="z0GRAUUo6ztId1xv3rtj-58" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=14;" value="Investigation Results" vertex="1">
+          <mxGeometry height="30" width="110" x="1920" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="z0GRAUUo6ztId1xv3rtj-67" edge="1" parent="1" source="z0GRAUUo6ztId1xv3rtj-59" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="z0GRAUUo6ztId1xv3rtj-65" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="z0GRAUUo6ztId1xv3rtj-59" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EDE7F6;labelBorderColor=none;align=center;" value="&lt;div&gt;&lt;b style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;🤖&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;AI Agent 2&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;Production Analyst&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;&lt;b&gt;LLM (Google Gemini)&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;b style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;──────────────&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;b&gt;✓ Analyze Results&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;✓ Root Cause Analysis&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;✓ Recommendations&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;✓ Investigation Summary&lt;/b&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="160" width="220" x="2330" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="z0GRAUUo6ztId1xv3rtj-61" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=14;" value="Aggregated JSON" vertex="1">
+          <mxGeometry height="30" width="60" x="2250" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="z0GRAUUo6ztId1xv3rtj-65" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6FFCC;" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Investigation Report&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;Issue Summary&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;Root Cause&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;Recommendation&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;Next Steps&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="160" width="220" x="2670" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="z0GRAUUo6ztId1xv3rtj-68" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=14;" value="Final Response" vertex="1">
+          <mxGeometry height="50" width="90" x="2560" y="230" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,67 @@
+<mxfile host="app.diagrams.net" agent="5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36">
+  <diagram id="R2lEEEUBdFMjLlhIrx00" name="Page-1">
+    <mxGraphModel dx="1720" dy="2516" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2336" pageHeight="1654" math="0" shadow="0" extFonts="Permanent Marker^https://fonts.googleapis.com/css?family=Permanent+Marker">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="DAGqM_Cyn1aFg2p90f73-32" connectable="0" parent="1" style="group" value="" vertex="1">
+          <mxGeometry height="830" width="765" x="130" y="-40" as="geometry" />
+        </mxCell>
+        <mxCell id="DAGqM_Cyn1aFg2p90f73-1" parent="DAGqM_Cyn1aFg2p90f73-32" style="whiteSpace=wrap;html=1;aspect=fixed;" value="&lt;div&gt;orders&lt;/div&gt;&lt;div&gt;-----------------------&lt;/div&gt;&lt;div&gt;PK&amp;nbsp; order_id&lt;/div&gt;&lt;div&gt;customer_name&lt;/div&gt;&lt;div&gt;order_status&lt;/div&gt;&lt;div&gt;payment_status&lt;/div&gt;&lt;div&gt;warehouse_id&lt;/div&gt;" vertex="1">
+          <mxGeometry height="100" width="100" x="30" y="121.46341463414635" as="geometry" />
+        </mxCell>
+        <mxCell id="DAGqM_Cyn1aFg2p90f73-2" parent="DAGqM_Cyn1aFg2p90f73-32" style="whiteSpace=wrap;html=1;aspect=fixed;" value="&lt;div&gt;shipment&lt;/div&gt;&lt;div&gt;-----------------------&lt;/div&gt;&lt;div&gt;PK&amp;nbsp; shipment_id&lt;/div&gt;&lt;div&gt;FK&amp;nbsp; order_id&lt;/div&gt;&lt;div&gt;shipment_status&lt;/div&gt;&lt;div&gt;awb&lt;/div&gt;&lt;div&gt;carrier&lt;/div&gt;" vertex="1">
+          <mxGeometry height="100" width="100" x="30" y="242.9268292682927" as="geometry" />
+        </mxCell>
+        <mxCell id="DAGqM_Cyn1aFg2p90f73-3" parent="DAGqM_Cyn1aFg2p90f73-32" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=14;" value="&lt;div&gt;Production Database&lt;/div&gt;&lt;div&gt;(Business Data)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30.365853658536587" width="165" y="70.85365853658537" as="geometry" />
+        </mxCell>
+        <mxCell id="DAGqM_Cyn1aFg2p90f73-5" parent="DAGqM_Cyn1aFg2p90f73-32" style="whiteSpace=wrap;html=1;aspect=fixed;" value="&lt;div&gt;orderdetail&lt;/div&gt;&lt;div&gt;-----------------------&lt;/div&gt;&lt;div&gt;PK&amp;nbsp; id&lt;/div&gt;&lt;div&gt;FK&amp;nbsp; order_id&lt;/div&gt;&lt;div&gt;sku&lt;/div&gt;&lt;div&gt;order_qty&lt;/div&gt;" vertex="1">
+          <mxGeometry height="100" width="100" x="30" y="485.8536585365854" as="geometry" />
+        </mxCell>
+        <mxCell id="DAGqM_Cyn1aFg2p90f73-6" parent="DAGqM_Cyn1aFg2p90f73-32" style="whiteSpace=wrap;html=1;aspect=fixed;" value="&lt;div&gt;inventory&lt;/div&gt;&lt;div&gt;-----------------------&lt;/div&gt;&lt;div&gt;PK&amp;nbsp; sku&lt;/div&gt;&lt;div&gt;available_qty&lt;/div&gt;&lt;div&gt;reserved_qty&lt;/div&gt;" vertex="1">
+          <mxGeometry height="100" width="100" x="30" y="607.3170731707318" as="geometry" />
+        </mxCell>
+        <mxCell id="DAGqM_Cyn1aFg2p90f73-7" parent="DAGqM_Cyn1aFg2p90f73-32" style="whiteSpace=wrap;html=1;aspect=fixed;" value="&lt;div&gt;api_log&lt;/div&gt;&lt;div&gt;-----------------------&lt;/div&gt;&lt;div&gt;PK&amp;nbsp; id&lt;/div&gt;&lt;div&gt;FK&amp;nbsp; order_id&lt;/div&gt;&lt;div&gt;api_name&lt;/div&gt;&lt;div&gt;response_code&lt;/div&gt;" vertex="1">
+          <mxGeometry height="100" width="100" x="30" y="364.390243902439" as="geometry" />
+        </mxCell>
+        <mxCell id="DAGqM_Cyn1aFg2p90f73-8" parent="DAGqM_Cyn1aFg2p90f73-32" style="whiteSpace=wrap;html=1;aspect=fixed;" value="&lt;div&gt;scheduler_log&lt;/div&gt;&lt;div&gt;-----------------------&lt;/div&gt;&lt;div&gt;PK&amp;nbsp; job_name&lt;/div&gt;&lt;div&gt;status&lt;/div&gt;&lt;div&gt;last_run&lt;/div&gt;" vertex="1">
+          <mxGeometry height="100" width="100" x="30" y="728.780487804878" as="geometry" />
+        </mxCell>
+        <mxCell id="DAGqM_Cyn1aFg2p90f73-9" parent="DAGqM_Cyn1aFg2p90f73-32" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;div&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;Metadata Repository&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;(AI Knowledge Base)&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30.365853658536587" width="160" x="272.5" y="70.85365853658537" as="geometry" />
+        </mxCell>
+        <mxCell id="DAGqM_Cyn1aFg2p90f73-10" parent="DAGqM_Cyn1aFg2p90f73-32" style="whiteSpace=wrap;html=1;aspect=fixed;" value="&lt;div&gt;table_metadata&lt;/div&gt;&lt;div&gt;-----------------------&lt;/div&gt;&lt;div&gt;PK id&lt;/div&gt;&lt;div&gt;table_name&lt;/div&gt;&lt;div&gt;primary_key&lt;/div&gt;" vertex="1">
+          <mxGeometry height="100" width="100" x="302.5" y="121.46341463414635" as="geometry" />
+        </mxCell>
+        <mxCell id="DAGqM_Cyn1aFg2p90f73-11" parent="DAGqM_Cyn1aFg2p90f73-32" style="whiteSpace=wrap;html=1;aspect=fixed;" value="&lt;div&gt;column_metadata&lt;/div&gt;&lt;div&gt;-----------------------&lt;/div&gt;&lt;div&gt;PK id&lt;/div&gt;&lt;div&gt;table_name&lt;/div&gt;&lt;div&gt;column_name&lt;/div&gt;" vertex="1">
+          <mxGeometry height="100" width="100" x="300" y="242.9268292682927" as="geometry" />
+        </mxCell>
+        <mxCell id="DAGqM_Cyn1aFg2p90f73-12" parent="DAGqM_Cyn1aFg2p90f73-32" style="whiteSpace=wrap;html=1;aspect=fixed;" value="&lt;div&gt;business_rules&lt;/div&gt;&lt;div&gt;-----------------------&lt;/div&gt;&lt;div&gt;PK rule_id&lt;/div&gt;&lt;div&gt;issue_type&lt;/div&gt;&lt;div&gt;priority&lt;/div&gt;" vertex="1">
+          <mxGeometry height="100" width="100" x="300" y="364.390243902439" as="geometry" />
+        </mxCell>
+        <mxCell id="DAGqM_Cyn1aFg2p90f73-13" parent="DAGqM_Cyn1aFg2p90f73-32" style="whiteSpace=wrap;html=1;aspect=fixed;" value="&lt;div&gt;investigation_steps&lt;/div&gt;&lt;div&gt;-----------------------&lt;/div&gt;&lt;div&gt;PK step_id&lt;/div&gt;&lt;div&gt;issue_type&lt;/div&gt;&lt;div&gt;table_name&lt;/div&gt;&lt;div&gt;lookup_column&lt;/div&gt;" vertex="1">
+          <mxGeometry height="105" width="105" x="300" y="485.8536585365854" as="geometry" />
+        </mxCell>
+        <mxCell id="DAGqM_Cyn1aFg2p90f73-15" parent="DAGqM_Cyn1aFg2p90f73-32" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=14;fontStyle=1;fontColor=light-dark(#0000FF,#A9C4EB);" value="&lt;div&gt;AI Production Debugging Agent&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Database Entity Relationship Diagram&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30.365853658536587" width="260" x="80" as="geometry" />
+        </mxCell>
+        <mxCell id="DAGqM_Cyn1aFg2p90f73-24" parent="DAGqM_Cyn1aFg2p90f73-32" style="rounded=1;whiteSpace=wrap;html=1;align=center;" value="&lt;div&gt;investigation_steps&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; │&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; ▼&lt;/div&gt;&lt;div&gt;table_metadata&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60.73170731707317" width="170" x="530" y="475.7317073170732" as="geometry" />
+        </mxCell>
+        <mxCell id="DAGqM_Cyn1aFg2p90f73-25" parent="DAGqM_Cyn1aFg2p90f73-32" style="rounded=1;whiteSpace=wrap;html=1;align=center;" value="&lt;div&gt;business_rules&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; │&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; ▼&lt;/div&gt;&lt;div&gt;investigation_steps&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60.73170731707317" width="170" x="530" y="384.6341463414634" as="geometry" />
+        </mxCell>
+        <mxCell id="DAGqM_Cyn1aFg2p90f73-26" parent="DAGqM_Cyn1aFg2p90f73-32" style="rounded=1;whiteSpace=wrap;html=1;align=center;" value="&lt;div&gt;table_metadata&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; │&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; ▼&lt;/div&gt;&lt;div&gt;column_metadata&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60.73170731707317" width="170" x="530" y="303.6585365853659" as="geometry" />
+        </mxCell>
+        <mxCell id="DAGqM_Cyn1aFg2p90f73-29" parent="DAGqM_Cyn1aFg2p90f73-32" style="rounded=1;whiteSpace=wrap;html=1;" value="&lt;div&gt;Legend&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;🔑 PK = Primary Key&lt;/div&gt;&lt;div&gt;🔗 FK = Foreign Key&lt;/div&gt;&lt;div&gt;──── Solid = Database Relationship&lt;/div&gt;&lt;div&gt;- - - - Dashed = Metadata Relationship&lt;/div&gt;" vertex="1">
+          <mxGeometry height="121.46341463414635" width="220" x="520" y="566.829268292683" as="geometry" />
+        </mxCell>
+        <mxCell id="DAGqM_Cyn1aFg2p90f73-28" parent="DAGqM_Cyn1aFg2p90f73-32" style="rounded=0;whiteSpace=wrap;html=1;align=center;" value="&lt;div style=&quot;text-align: justify;&quot;&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;orders&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;────────► shipment&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;orders&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;────────► api_log&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;orders&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;────────► orderdetail&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="131.58536585365854" width="300" x="465" y="121.45926829268294" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
